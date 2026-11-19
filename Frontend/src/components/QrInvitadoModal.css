@@ -1,0 +1,18 @@
+.qr-modal { max-height: calc(100vh - 40px); overflow-y: auto; }
+.qr-modal-formatos { width: 100%; min-width: 0; margin: 0 0 14px; padding: 0; border: 0; }
+.qr-modal-formatos legend { margin: 0 auto 7px; padding: 0; color: var(--color-text-secondary); font-size: 11px; font-weight: 600; }
+.qr-modal-formatos-grupo { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); overflow: hidden; border: 1px solid var(--color-border-strong); border-radius: 10px; }
+.qr-modal-formatos-grupo label { position: relative; display: grid; min-height: 38px; place-items: center; padding: 4px 2px; background: var(--color-bg-elevated); color: var(--color-text-secondary); font-size: 10px; text-align: center; cursor: pointer; }
+.qr-modal-formatos-grupo label + label { border-left: 1px solid var(--color-border); }
+.qr-modal-formatos-grupo label.activo { background: rgba(201,164,93,.18); color: #f1d9a4; font-weight: 700; }
+.qr-modal-formatos-grupo input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.qr-modal-formatos-grupo label:has(input:focus-visible) { outline: 2px solid var(--color-accent-strong); outline-offset: -2px; }
+.qr-modal-formato-descripcion { min-height: 30px; margin: 7px 0 0; color: var(--color-text-muted); font-size: 11px; line-height: 1.4; }
+.qr-modal-actions { flex-wrap: wrap; }
+.qr-modal-actions .btn { text-decoration: none; }
+.qr-modal-actions-secundarias { margin-top: 8px; }
+.qr-modal-aviso { min-height: 18px; margin: 8px 0 6px; color: var(--color-success); font-size: 11px; }
+
+@media (max-width: 520px) {
+  .qr-modal-actions-secundarias { width: 100%; flex-direction: column; }
+}

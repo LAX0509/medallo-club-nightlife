@@ -1,0 +1,26 @@
+.promotor-page { min-width: 0; }
+.promotor-resumen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.promotor-resumen-card { display: flex; min-height: 88px; flex-direction: column; justify-content: center; gap: 8px; padding: 16px 18px; }
+.promotor-resumen-card span { color: var(--color-text-muted); font-size: 11px; }
+.promotor-resumen-card strong { color: var(--color-text-primary); font-size: 24px; line-height: 1; }
+.promotor-reservas-card { min-width: 0; }
+.promotor-vacio { margin: 0; padding: 30px 18px; color: var(--color-text-muted); text-align: center; }
+.promotor-vacio strong { color: var(--color-text-primary); }
+.promotor-vacio p { margin: 8px auto 0; max-width: 460px; font-size: 12px; line-height: 1.6; }
+.promotor-reservas-tabla { min-width: 820px; }
+.promotor-codigo-garantia { display: block; width: fit-content; max-width: 100%; margin-top: 6px; padding: 2px 7px; border: 1px dashed rgba(109,181,144,.45); border-radius: 6px; background: rgba(109,181,144,.07); color: #8ccaa9; font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 11px; overflow-wrap: anywhere; }
+.promotor-pases { display: grid; gap: 5px; min-width: 70px; }
+.promotor-pases strong { color: var(--color-text-primary); font-size: 13px; }
+.promotor-pases-barra { height: 5px; overflow: hidden; border-radius: 99px; background: #253149; }
+.promotor-pases-barra span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #3867f4, #00b6a4); }
+.promotor-sin-pases { color: var(--color-text-muted); }
+.promotor-reservas-tabla td small { display: block; margin-top: 4px; color: var(--color-text-muted); font-size: 11px; }
+.promotor-eventos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 16px; }
+.promotor-evento-card { overflow: hidden; padding: 0; }
+.promotor-evento-media { display: block; width: 100%; max-height: 260px; aspect-ratio: 16 / 9; object-fit: cover; background: #0c1421; }
+.promotor-evento-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 18px; }
+.promotor-evento-copy .section-kicker { margin: 0; }
+.promotor-evento-copy h2 { margin: 0; font-size: 19px; }
+.promotor-evento-copy p:not(.section-kicker) { margin: 0 0 5px; color: var(--color-text-secondary); font-size: 13px; }
+.promotor-evento-copy a { text-decoration: none; }
+@media (max-width: 560px) { .promotor-eventos-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,47 @@
+.login-page { display: grid; min-height: 100vh; grid-template-columns: minmax(320px, .85fr) 1.15fr; background: var(--color-bg); }
+.login-aside { position: relative; display: flex; min-height: 100vh; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 34px clamp(28px, 5vw, 76px); border-right: 1px solid var(--color-border); background: linear-gradient(180deg,rgba(5,10,24,.78),rgba(5,10,24,.9)),url("../assets/medallo-brand/medallo-fachada.png") center/cover,#111a28; }
+.login-aside::after { position: absolute; right: -130px; bottom: 12%; width: 350px; height: 350px; border: 1px solid rgba(89,132,255,.2); border-radius: 50%; box-shadow: 0 0 0 35px rgba(89,132,255,.04), 0 0 0 75px rgba(255,22,141,.025); content: ""; pointer-events: none; }
+.login-aside-brand { display: flex; align-items: center; gap: 11px; }
+.login-aside-brand > span:last-child { display: flex; flex-direction: column; gap: 2px; }
+.login-aside-brand strong { font-size: 12px; letter-spacing: .07em; }
+.login-aside-brand small { color: var(--color-text-muted); font-size: 10px; }
+.login-brand-seal { display: block; width: 54px; height: 54px; flex: 0 0 54px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 21px rgba(28,83,231,.2); }
+.login-editorial { position: relative; z-index: 1; max-width: 420px; margin: 0 0 6vh; }
+.login-kicker { margin-bottom: 19px; color: var(--color-accent-strong); font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.login-editorial h2 { margin-bottom: 14px; font-size: clamp(38px, 4.4vw, 64px); line-height: .99; letter-spacing: -.055em; font-weight: 550; }
+.login-editorial h2 em { color: var(--color-accent-strong); font-family: Georgia, serif; font-weight: 400; }
+.login-editorial > p:last-child { max-width: 290px; margin: 0; color: var(--color-text-secondary); font-size: 14px; }
+.login-aside-foot { color: #718097; font-size: 9px; font-weight: 600; letter-spacing: .15em; }
+.login-main { position: relative; display: flex; min-height: 100vh; align-items: center; justify-content: center; padding: 40px 24px 70px; }
+.login-card { width: min(100%, 390px); padding: 0; }
+.login-home-cta { display: inline-flex; align-items: center; margin-bottom: 20px; color: var(--color-text-muted); font-size: 12px; text-decoration: none; transition: color .16s ease; }
+.login-home-cta:hover { color: var(--color-accent-strong); }
+.login-card-heading { margin-bottom: 29px; }
+.login-card-heading .page-eyebrow { margin-bottom: 10px; }
+.login-card-heading h1 { margin-bottom: 7px; }
+.login-card-heading > p:last-child { margin: 0; color: var(--color-text-secondary); font-size: 13px; }
+.login-card .form-field { margin-bottom: 19px; }
+.login-submit { justify-content: space-between; min-height: 46px; margin-top: 5px; padding: 0 16px; }
+.login-submit span { font-size: 18px; font-weight: 400; }
+.login-footnote { margin: 16px 0 0; color: var(--color-text-muted); font-size: 11px; text-align: center; }
+.login-copyright { position: absolute; right: 28px; bottom: 22px; color: #65738a; font-size: 10px; }
+.reservation-cta { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 20px; color: var(--color-accent-strong); font-size: 12px; text-align: center; text-decoration: none; }
+.reservation-cta:hover { color: #f3d99f; text-decoration: underline; }
+.login-register-cta { display: flex; justify-content: center; gap: 5px; margin-top: 14px; color: var(--color-text-secondary); font-size: 12px; text-decoration: none; }
+.login-register-cta strong { color: var(--color-accent-strong); font-weight: 600; }
+.login-register-cta:hover strong { text-decoration: underline; }
+.login-register-note { margin: 13px 0 0; color: var(--color-text-muted); font-size: 11px; text-align: center; }
+.register-success { margin-bottom: 16px; padding: 11px 13px; border: 1px solid rgba(109,181,144,.35); border-radius: var(--radius-sm); background: rgba(109,181,144,.1); color: #9dd4b5; font-size: 12px; }
+.register-card { padding-bottom: 8px; }
+.register-card .login-card-heading { margin-bottom: 21px; }
+.register-card .form-field { margin-bottom: 13px; }
+.register-card .form-field .field-hint { display: block; margin-top: 5px; color: var(--color-text-muted); font-size: 11px; }
+.register-card .login-submit { margin-top: 10px; }
+.register-card .reservation-cta { margin-top: 13px; }
+
+@media (max-width: 760px) {
+  .login-page { grid-template-columns: 1fr; }
+  .login-aside { min-height: auto; padding: 20px 22px; border-right: 0; border-bottom: 1px solid var(--color-border); }
+  .login-aside::after, .login-editorial, .login-aside-foot { display: none; }
+  .login-main { min-height: auto; padding: 60px 22px 76px; }
+}

@@ -1,0 +1,24 @@
+# Secretos y entornos
+.env
+.env.local
+*.env.vercel
+.vercel
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+.reporte_*.json
+.reporte_*.xml
+*.db
+
+# Node
+node_modules/
+dist/
+
+# Archivos generados / locales
+*.zip
+Frontend/public/uploads/
+.DS_Store

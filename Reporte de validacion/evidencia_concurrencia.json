@@ -1,0 +1,120 @@
+{
+  "hilos": 16,
+  "carrera_mismo_qr": {
+    "rondas": 20,
+    "aprobada": true,
+    "detalle": [
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      },
+      {
+        "validos": 1,
+        "duplicados": 15,
+        "otros": []
+      }
+    ]
+  },
+  "carga_mixta": {
+    "solicitudes": 200,
+    "validos": 200,
+    "errores": [],
+    "solicitudes_por_segundo": 5.7,
+    "latencia_ms": {
+      "p50": 155.2,
+      "p95": 356.5,
+      "max": 590.0
+    }
+  }
+}

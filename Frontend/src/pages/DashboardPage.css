@@ -1,0 +1,62 @@
+.event-select { appearance: none; padding-right: 36px; background-image: linear-gradient(45deg, transparent 50%, #8591a3 50%), linear-gradient(135deg, #8591a3 50%, transparent 50%); background-position: calc(100% - 15px) 18px, calc(100% - 10px) 18px; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 15px; }
+.section-heading h2, .dashboard-recommendation h2 { margin: 0; }
+.section-kicker { margin: 0 0 5px; color: var(--color-text-muted); font-size: 10px; font-weight: 700; letter-spacing: .105em; text-transform: uppercase; }
+.dashboard-aforo { padding: 21px 23px; }
+.aforo-bar-track { width: 100%; height: 8px; overflow: hidden; margin: 20px 0 10px; border-radius: var(--radius-pill); background: #0d1523; }
+.aforo-bar-fill { height: 100%; border-radius: inherit; transition: width .35s ease; }
+.aforo-bar-fill.nivel-bajo { background: #6db590; }
+.aforo-bar-fill.nivel-medio { background: var(--color-accent); }
+.aforo-bar-fill.nivel-alto { background: var(--color-danger); }
+.aforo-bar-caption { display: flex; align-items: center; gap: 9px; margin: 0; color: var(--color-text-secondary); font-size: 12px; }
+.aforo-caption-divider { display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: #64738b; }
+.dashboard-recommendation { border-left: 2px solid var(--color-accent); }
+.recommendation-copy { max-width: 840px; margin: 11px 0 0; color: var(--color-text-secondary); font-size: 13px; line-height: 1.7; }
+.alert-count { display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; color: var(--color-text-secondary); font-size: 11px; }
+.loading-state { color: var(--color-text-secondary); }
+.dashboard-aforo .alert-banner { margin-top: 15px; }
+
+@media (max-width: 600px) {
+  .dashboard-aforo { padding: 17px; }
+  .aforo-bar-caption { align-items: flex-start; flex-wrap: wrap; }
+}
+
+/* Informe de la jornada */
+.informe-jornada { margin-top: 20px; }
+.informe-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.informe-casilla { display: inline-flex; align-items: center; gap: 8px; color: var(--color-text-secondary); font-size: 13px; cursor: pointer; }
+.informe-casilla input { width: 16px; height: 16px; accent-color: var(--color-accent); }
+.informe-estado { margin: 0; color: var(--color-text-secondary); font-size: 13px; }
+.informe-contenido { display: flex; flex-direction: column; gap: 18px; }
+.informe-encabezado h3 { margin: 0 0 2px; font-size: 18px; }
+.informe-encabezado p { margin: 0; color: var(--color-text-muted); font-size: 12px; }
+.informe-narrativa { padding: 16px 18px; border: 1px solid rgba(131,169,255,.28); border-left: 3px solid var(--color-accent-strong); border-radius: var(--radius-md); background: rgba(131,169,255,.07); }
+.informe-narrativa-cabecera { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.informe-narrativa p { margin: 0; color: var(--color-text-primary); font-size: 14px; line-height: 1.7; }
+.informe-aviso { display: block; margin-top: 10px; color: var(--color-text-muted); font-size: 11px; }
+.informe-recomendaciones h3, .informe-bloque h3 { margin: 0 0 8px; }
+.informe-recomendaciones ol { display: flex; flex-direction: column; gap: 8px; margin: 0; padding-left: 22px; color: var(--color-text-secondary); font-size: 13px; line-height: 1.6; }
+.informe-bloques { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.informe-bloque { min-width: 0; padding: 14px 16px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-elevated); }
+.informe-bloque dl { display: flex; flex-direction: column; gap: 6px; margin: 0; font-size: 13px; }
+.informe-bloque dl div { display: flex; justify-content: space-between; gap: 10px; }
+.informe-bloque dt { color: var(--color-text-secondary); }
+.informe-bloque dd { margin: 0; font-weight: 650; text-align: right; }
+.informe-lista-critica { margin: 0 0 6px; color: var(--color-text-secondary); font-size: 13px; overflow-wrap: anywhere; }
+.informe-consumo { margin: 0; padding-left: 18px; color: var(--color-text-secondary); font-size: 13px; }
+
+@media print {
+  [data-no-imprimir] { display: none !important; }
+  html, body, #root, .app-shell { height: auto !important; min-height: 0 !important; overflow: visible !important; background: #fff !important; color: #111 !important; }
+  .informe-jornada { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: #fff !important; color: #111 !important; font-family: Georgia, "Times New Roman", serif; }
+  .informe-jornada * { color: #111 !important; border-color: #bbb !important; background: transparent !important; box-shadow: none !important; }
+  .informe-acciones { display: none !important; }
+  .informe-jornada .section-heading { margin-bottom: 8px; }
+  .informe-jornada h2 { font-size: 22px; }
+  .informe-jornada .section-kicker { color: #555 !important; }
+  .informe-narrativa { border: 1px solid #999 !important; border-left: 4px solid #333 !important; }
+  .informe-narrativa p { font-size: 13pt; }
+  .informe-recomendaciones ol, .informe-bloque dl, .informe-lista-critica, .informe-consumo { font-size: 11pt; }
+  .informe-bloque, .informe-narrativa, .informe-recomendaciones { break-inside: avoid; }
+  .informe-jornada .badge { border: 1px solid #555 !important; }
+}

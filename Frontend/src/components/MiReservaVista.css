@@ -1,0 +1,53 @@
+.mireserva { display: flex; width: min(100%, 720px); flex-direction: column; gap: 16px; margin: 0 auto; }
+.mireserva-estado-carga { margin: 0; padding: 24px 0; color: var(--color-text-secondary); text-align: center; }
+.mireserva-cabecera { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.mireserva-cabecera h2 { margin: 2px 0 2px; font-size: 24px; }
+.mireserva-kicker { margin: 0; color: #e3c183; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.mireserva-cliente { margin: 0; color: var(--color-text-muted); font-size: 12px; }
+.mireserva-evento { display: flex; flex-direction: column; gap: 14px; padding: 0; overflow: hidden; }
+.mireserva-flyer { display: block; width: 100%; max-height: 300px; object-fit: cover; background: #0c1421; }
+.mireserva-evento-datos { padding: 0 20px 20px; }
+.mireserva-evento > .mireserva-evento-datos:first-child { padding-top: 20px; }
+.mireserva-evento-datos h3 { margin: 0 0 4px; font-size: 18px; }
+.mireserva-fecha { margin: 0; color: var(--color-text-primary); font-size: 13px; }
+.mireserva-tematica { margin: 4px 0 0; color: var(--color-text-secondary); font-size: 12px; }
+.mireserva-resumen { display: flex; gap: 10px; margin: 14px 0 0; padding: 0; list-style: none; }
+.mireserva-resumen li { display: flex; flex: 1; flex-direction: column; gap: 2px; padding: 10px 12px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-elevated); }
+.mireserva-resumen span { color: var(--color-text-muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.mireserva-resumen strong { font-size: 15px; }
+.mireserva-aviso { display: flex; align-items: center; gap: 12px; padding: 13px 15px; border: 1px solid rgba(201,164,93,.28); border-radius: var(--radius-md); background: rgba(201,164,93,.08); }
+.mireserva-aviso p { margin: 0; color: var(--color-text-secondary); font-size: 13px; line-height: 1.55; }
+.mireserva-pulso { flex: 0 0 auto; width: 10px; height: 10px; border-radius: 50%; background: #c9a45d; animation: mireserva-pulso 1.6s ease-in-out infinite; }
+@keyframes mireserva-pulso { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.75); } }
+.mireserva-final { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 18px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-elevated); }
+.mireserva-final strong { font-size: 15px; }
+.mireserva-final p { margin: 0; color: var(--color-text-secondary); font-size: 13px; line-height: 1.6; }
+.mireserva-final .btn { text-decoration: none; }
+.mireserva-cancelada { border-color: rgba(215,120,120,.3); background: rgba(215,120,120,.07); }
+.mireserva-garantia { padding: 20px; border: 1px solid rgba(201,164,93,.55); border-radius: var(--radius-lg); background: linear-gradient(160deg, rgba(201,164,93,.2), rgba(201,164,93,.05) 60%), var(--color-bg-card); box-shadow: 0 0 0 1px rgba(201,164,93,.12), var(--shadow-card); }
+.mireserva-garantia-etiqueta { margin: 0 0 10px; color: #e3c183; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.mireserva-garantia-codigo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.mireserva-garantia-codigo code { color: #f1d9a4; font-size: clamp(22px, 7vw, 30px); font-weight: 700; letter-spacing: .06em; overflow-wrap: anywhere; }
+.mireserva-garantia-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 16px 0 0; }
+.mireserva-garantia-datos div { padding: 10px 12px; border-radius: var(--radius-md); background: rgba(0,0,0,.22); }
+.mireserva-garantia-datos dt { color: var(--color-text-muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.mireserva-garantia-datos dd { margin: 3px 0 0; color: var(--color-text-primary); font-size: 14px; font-weight: 600; }
+.mireserva-garantia-ayuda { margin: 12px 0 0; color: var(--color-text-secondary); font-size: 12px; }
+.mireserva-pases h3 { margin: 0 0 10px; font-size: 15px; }
+.mireserva-pases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.mireserva-pase { display: flex; flex-direction: column; gap: 12px; padding: 16px; }
+.mireserva-pase-cabecera { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.mireserva-pase-cabecera strong { min-width: 0; overflow-wrap: anywhere; font-size: 14px; }
+.mireserva-qr { display: grid; place-items: center; padding: 10px; border-radius: 12px; background: #fff; }
+.mireserva-qr img { display: block; width: 100%; max-width: 200px; height: auto; aspect-ratio: 1; }
+.mireserva-pase-acciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.mireserva-pase-acciones .btn { flex: 1 1 auto; text-decoration: none; }
+.mireserva-cancelar { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 4px; }
+.mireserva-error { margin: 0; padding: 9px 11px; border: 1px solid rgba(215,120,120,.24); border-radius: 8px; background: rgba(215,120,120,.08); color: #e79898; font-size: 12px; }
+
+@media (max-width: 480px) {
+  .mireserva-cabecera h2 { font-size: 21px; }
+  .mireserva-pases-grid { grid-template-columns: 1fr; }
+  .mireserva-cancelar .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .mireserva-pulso { animation: none; } }

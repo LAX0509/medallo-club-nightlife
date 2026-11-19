@@ -1,0 +1,38 @@
+.agenda-admin-page { display: flex; flex-direction: column; gap: 28px; }
+.agenda-editor { max-width: 900px; }
+.agenda-editor .section-heading { align-items: center; }
+.agenda-form { display: flex; flex-direction: column; gap: 2px; }
+.agenda-form-row { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.agenda-upload-field input[type="file"] { min-height: 44px; padding: 8px; border: 1px dashed var(--color-border-strong); border-radius: var(--radius-sm); background: rgba(255,255,255,.025); color: var(--color-text-secondary); font-size: 12px; }
+.agenda-upload-field label span { color: var(--color-text-muted); font-weight: 400; }
+.agenda-flyer-preview { display: flex; align-items: center; gap: 11px; margin-top: 4px; color: var(--color-text-muted); font-size: 11px; }
+.agenda-flyer-preview img,.agenda-flyer-preview video { width: 100px; height: 76px; border: 1px solid var(--color-border-strong); border-radius: 8px; object-fit: cover; }
+.agenda-aviso { padding: 11px 14px; border: 1px solid rgba(109,181,144,.25); border-radius: var(--radius-sm); background: rgba(109,181,144,.08); color: #9dd4b5; font-size: 12px; }
+.agenda-list-section { min-width: 0; }
+.agenda-list-section > .section-heading { margin-bottom: 15px; }
+.agenda-total { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; color: var(--color-text-secondary); font-size: 12px; }
+.agenda-event-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 15px; }
+.agenda-event-card { display: flex; flex-direction: column; gap: 13px; padding: 12px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-card); }
+.agenda-event-poster { position: relative; aspect-ratio: 1.65; overflow: hidden; border-radius: 8px; background: #08122c; }
+.agenda-event-poster > img,.agenda-event-poster > video { width: 100%; height: 100%; object-fit: cover; }
+.agenda-poster-empty { display: flex; height: 100%; flex-direction: column; justify-content: space-between; padding: 14px; background: radial-gradient(circle at 80% 15%,rgba(56,103,255,.42),transparent 48%),linear-gradient(140deg,#101b36,#080c15); }
+.agenda-poster-empty span { color: #a3baff; font-size: 8px; font-weight: 700; letter-spacing: .16em; }
+.agenda-poster-empty strong { max-width: 85%; color: #f5f7ff; font-size: 19px; line-height: 1.1; }
+.agenda-event-status { position: absolute; top: 9px; right: 9px; padding: 4px 8px; border: 1px solid rgba(255,255,255,.18); border-radius: 99px; background: rgba(6,10,20,.72); color: #d7e1f6; font-size: 9px; text-transform: capitalize; backdrop-filter: blur(8px); }
+.agenda-event-status.status-planeado { color: #b7caff; }
+.agenda-event-status.status-en-curso { color: #9dd4b5; }
+.agenda-event-status.status-cerrado { color: #c3cad5; }
+.agenda-event-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; gap: 4px; }
+.agenda-event-copy p { margin: 0; color: var(--color-text-muted); font-size: 10px; }
+.agenda-event-copy p::first-letter { text-transform: uppercase; }
+.agenda-event-copy h3 { margin: 2px 0; color: var(--color-text-primary); font-size: 15px; }
+.agenda-event-copy > span { color: #9fb8ff; font-size: 11px; }
+.agenda-event-copy > small { margin-top: 4px; color: var(--color-text-muted); font-size: 10px; }
+.agenda-event-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.agenda-eliminar { color: var(--color-danger); border-color: rgba(215,120,120,.45); }
+.agenda-eliminar:hover { background: rgba(215,120,120,.12); }
+.agenda-pasadas { margin-top: 28px; }
+.agenda-flyer-preview { flex-wrap: wrap; }
+.agenda-empty { padding: 22px; border: 1px dashed var(--color-border-strong); border-radius: var(--radius-md); color: var(--color-text-muted); font-size: 12px; }
+@media(max-width:700px) { .agenda-form-row { grid-template-columns: 1fr 1fr; } }
+@media(max-width:480px) { .agenda-form-row { grid-template-columns: 1fr; gap: 0; }.agenda-event-grid { grid-template-columns: 1fr; } }

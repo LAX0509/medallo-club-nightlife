@@ -1,0 +1,83 @@
+.reservas-admin-page { min-width: 0; }
+.reservas-resumen { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 18px; }
+.reservas-admin-card { min-width: 0; }
+.reservas-admin-card .section-heading { margin-bottom: 10px; }
+.reservas-admin-empty { margin: 0; padding: 26px 12px; color: var(--color-text-muted); font-size: 13px; text-align: center; }
+.reservas-table { min-width: 1020px; }
+.reservas-table td:first-child { min-width: 140px; }
+.reservas-table td:nth-child(2) { min-width: 150px; }
+.reserva-telefono, .reserva-nota, .reserva-detalle { display: block; margin-top: 3px; color: var(--color-text-muted); font-size: 11px; text-decoration: none; }
+.reserva-telefono:hover { color: var(--color-accent-strong); }
+.reserva-nota { max-width: 230px; white-space: normal; }
+.reserva-acciones { display: flex; flex-wrap: wrap; gap: 6px; }
+.reserva-sin-accion { color: var(--color-text-muted); }
+.reserva-eliminar { border-color: rgba(215,120,120,.5); color: #e69b9b; }
+.reserva-eliminar:hover:not(:disabled) { border-color: var(--color-danger); background: rgba(215,120,120,.1); color: #f0b1b1; }
+.reservas-admin-nota { margin: 12px 2px; color: var(--color-text-muted); font-size: 11px; }
+.reservas-table tr.reserva-destacada { outline: 2px solid var(--color-accent-strong); outline-offset: -2px; background: rgb(56 103 244 / 12%); transition: background .3s ease; }
+
+.reservas-whatsapp-notice { margin: 0 0 14px; padding: 10px 13px; border: 1px solid rgba(109,181,144,.25); border-radius: 8px; background: rgba(109,181,144,.08); color: #9dd4b5; font-size: 12px; }
+.reserva-whatsapp-estado { display: block; margin-top: 5px; color: var(--color-text-muted); font-size: 9px; }
+
+/* Filtros y búsqueda */
+.reservas-herramientas { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.reservas-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.reservas-tab { display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 6px 12px; border: 1px solid var(--color-border); border-radius: var(--radius-pill); background: transparent; color: var(--color-text-secondary); font-size: 12px; font-weight: 600; cursor: pointer; transition: background-color .16s ease, border-color .16s ease, color .16s ease; }
+.reservas-tab:hover { border-color: var(--color-border-strong); color: var(--color-text-primary); }
+.reservas-tab.activa { border-color: var(--color-accent); background: rgba(36,89,223,.18); color: var(--color-accent-strong); }
+.reservas-tab-conteo { color: var(--color-text-muted); font-size: 11px; font-weight: 500; }
+.reservas-tab.activa .reservas-tab-conteo { color: inherit; }
+.reservas-busqueda { width: min(100%, 280px); min-height: 38px; padding: 8px 12px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: #0f1726; color: var(--color-text-primary); }
+.reservas-busqueda:focus { outline: none; border-color: var(--color-accent); background: #111c2c; }
+.reservas-busqueda::placeholder { color: #69778d; }
+
+/* Garantía en la tabla */
+.reserva-garantia { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; margin-top: 7px; }
+.reserva-garantia small { color: var(--color-text-muted); font-size: 11px; }
+.reserva-codigo { max-width: 100%; padding: 2px 7px; border: 1px dashed rgba(109,181,144,.45); border-radius: 6px; background: rgba(109,181,144,.07); color: #8ccaa9; font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 11px; overflow-wrap: anywhere; text-align: left; cursor: copy; }
+.reserva-codigo:hover { background: rgba(109,181,144,.16); }
+.reserva-progreso { display: grid; gap: 5px; min-width: 70px; color: var(--color-text-primary); font-size: 12px; font-weight: 600; }
+.reserva-progreso-barra { height: 5px; overflow: hidden; border-radius: 99px; background: #253149; }
+.reserva-progreso-barra span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #3867f4, #00b6a4); transition: width .25s ease; }
+
+/* Modales */
+.reservas-modal-overlay { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; overflow-y: auto; padding: 20px; background: rgb(3 8 18 / 78%); backdrop-filter: blur(5px); }
+.reservas-modal { position: relative; width: min(100%, 480px); max-height: calc(100vh - 40px); overflow-y: auto; padding: 26px; box-shadow: 0 24px 90px rgb(0 0 0 / 45%); }
+.reservas-modal-ancho { width: min(100%, 640px); }
+.reservas-modal .section-kicker { margin: 0 0 7px; }
+.reservas-modal h2 { margin: 0 0 12px; font-size: 21px; }
+.reservas-modal-cerrar { position: absolute; top: 12px; right: 14px; display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; background: transparent; color: var(--color-text-secondary); font-size: 23px; line-height: 1; cursor: pointer; }
+.reservas-modal-cerrar:hover:not(:disabled) { border-color: var(--color-border-strong); color: var(--color-text-primary); }
+.reservas-modal-cerrar:disabled { opacity: .48; cursor: not-allowed; }
+.reservas-modal-ayuda { margin: -6px 0 14px; color: var(--color-text-muted); font-size: 12px; }
+.reservas-modal-resumen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; margin: 0 0 12px; padding: 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-elevated); }
+.reservas-modal-resumen dt { color: var(--color-text-muted); font-size: 10px; font-weight: 650; letter-spacing: .075em; text-transform: uppercase; }
+.reservas-modal-resumen dd { margin: 2px 0 0; color: var(--color-text-primary); font-size: 13px; overflow-wrap: anywhere; }
+.reservas-modal-pases { margin: 0 0 18px; color: var(--color-text-secondary); font-size: 13px; }
+.reservas-modal-pases strong { color: var(--color-accent-strong); }
+.reservas-modal-fila { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
+.reservas-modal-error { margin: 0 0 14px; padding: 10px 13px; border: 1px solid rgba(215,120,120,.3); border-radius: 8px; background: rgba(215,120,120,.08); color: #e79898; font-size: 12px; }
+.reservas-modal-error .btn { margin-left: 8px; }
+.reservas-modal-forzar { display: flex; align-items: center; gap: 9px; margin: 0 0 14px; color: var(--color-text-secondary); font-size: 13px; cursor: pointer; }
+.reservas-modal-forzar input { width: 17px; height: 17px; accent-color: var(--color-accent); }
+.reservas-modal-aviso { margin: 12px 0 0; color: #9dd4b5; font-size: 12px; }
+.reservas-modal-acciones { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+/* Lista de pases */
+.reservas-pases-lista { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.reservas-pase { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-elevated); }
+.reservas-pase-qr { display: block; width: 64px; height: 64px; border-radius: 6px; background: #fff; object-fit: contain; }
+.reservas-pase-datos { display: grid; justify-items: start; gap: 4px; min-width: 0; }
+.reservas-pase-datos strong { color: var(--color-text-primary); font-size: 13px; overflow-wrap: anywhere; }
+.reservas-pase-datos code { max-width: 100%; color: var(--color-text-muted); font-size: 10px; overflow-wrap: anywhere; }
+.reservas-pase-acciones { display: flex; flex-direction: column; gap: 6px; }
+
+@media (max-width: 560px) {
+  .reservas-resumen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reservas-busqueda { width: 100%; }
+  .reservas-modal { padding: 22px 16px; }
+  .reservas-modal-fila { grid-template-columns: 1fr; }
+  .reservas-modal-acciones { flex-direction: column-reverse; }
+  .reservas-pase { grid-template-columns: auto minmax(0, 1fr); }
+  .reservas-pase-acciones { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; }
+}

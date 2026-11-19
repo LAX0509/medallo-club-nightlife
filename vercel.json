@@ -1,0 +1,24 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "echo \"Las dependencias se instalan en scripts/vercel-build.sh\"",
+  "buildCommand": "bash scripts/vercel-build.sh",
+  "outputDirectory": "Frontend/dist",
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 30,
+      "excludeFiles": "{Frontend/**,Database/**,Reporte de validacion/**,Backend/tests/**,scripts/**}"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/v1/(.*)", "destination": "/api/index" },
+    { "source": "/health", "destination": "/api/index" },
+    { "source": "/docs", "destination": "/api/index" },
+    { "source": "/openapi.json", "destination": "/api/index" },
+    { "source": "/webhooks/(.*)", "destination": "/api/index" },
+    {
+      "source": "/((?!api/|health|docs|openapi.json|webhooks/|uploads/|assets/|favicon.svg).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

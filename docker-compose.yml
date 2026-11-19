@@ -1,0 +1,26 @@
+# Base de datos PostgreSQL para ejecutar Medallo Club en local (no hace falta instalar PostgreSQL).
+# Uso:  docker compose up -d --wait db
+# Credenciales por defecto = las de Backend/.env.example (DATABASE_URL).
+# Si el puerto 5432 ya está ocupado (otro PostgreSQL): DB_PORT=5433 docker compose up -d --wait db
+# y cambia el puerto en DATABASE_URL de Backend/.env.
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: medallo-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nightlife_db
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - medallo_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d nightlife_db"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  medallo_pgdata:
